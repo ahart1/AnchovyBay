@@ -125,8 +125,8 @@ bio.rule <- function(Rsim.scenario, Rsim.run, group, gear, ref.point, year){
 for(iyr in 25:99){ # Simulate years 26 through 100
   # HCR
   ABsim <- bio.rule(Rsim.scenario = ABsim, Rsim.run = AB.full, group='cod', gear='trawlers', ref.point=cod.ref, year=iyr)
-  # Step forwared
-  rsim.step(ABsim, AB.full, method = "AB", year.end = iyr+1)
+  # Step forward
+  AB.full <- rsim.step(ABsim, AB.full, method = "AB", year.end = iyr+1)
 }
 ```
 
